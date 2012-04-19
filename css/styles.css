@@ -1,0 +1,150 @@
+@charset "utf-8";
+body {
+  width: 100%;
+  *zoom: 1;
+}
+body:before,
+body:after {
+  content: "";
+  display: table;
+}
+body:after {
+  clear: both;
+}
+/*
+	The general theme option styles.
+*/
+/*
+	The theme options specific for the form styles.
+*/
+/*
+.rounded-corners(@radius1: 7px, @radius2: 7px, @radius3: 7px, @radius4: 7px) {
+	-moz-border-radius: @radius1 @radius2 @radius3 @radius4;
+	-webkit-border-radius: @radius1 @radius2 @radius3 @radius4;
+	border-radius: @radius1 @radius2 @radius3 @radius4;
+}
+.box-shadow(@x: 0px, @y: 0px, @size: 5px, @color: #000) {
+	-moz-box-shadow: 		@arguments;
+	-webkit-box-shadow: 	@arguments;
+	box-shadow: 			@arguments;
+}
+.core-opacity(@op:100) {
+	opacity: (@op/100);
+	zoom: 1;
+}
+.constrain(@width: 960px) {
+	display: block;
+	width: @width;
+	margin: 0 auto;
+}
+*/html {
+  overflow: hidden;
+}
+body {
+  color: #333333;
+  font: 12px/1.5 Arial, sans-serif;
+  /*	width: @core-page-width;*/
+
+}
+body  > div {
+  padding: 30px 0px;
+}
+header {
+  background: green;
+  color: #fff;
+  padding: 1px;
+  text-align: center;
+}
+section article {
+  border: 1px solid red;
+  padding: 15px;
+}
+aside {
+  border: 1px solid red;
+  padding: 5px;
+}
+footer {
+  clear: both;
+  color: #fff;
+  text-align: center;
+  background: #80bf40;
+  padding: 20px;
+}
+@media only screen and (min-width: 768px) {
+  /*
+  	section {
+  		.column(10);
+  		.row(10);
+  		
+  		article {
+  			.column(10,10);
+  		}
+  	}
+  
+  	aside {
+  		.column(2);
+  	}
+  */
+}
+@media only screen and (min-width: 1024px) {
+  div {
+    /*		.column(12);*/
+  
+  }
+  div section {
+    -webkit-box-sizing: border-box;
+    /* Safari/Chrome, other WebKit */
+  
+    -moz-box-sizing: border-box;
+    /* Firefox, other Gecko */
+  
+    box-sizing: border-box;
+    /* Opera/IE 8+ */
+  
+    display: inline;
+    float: left;
+    width: 81.25%;
+    margin: 0 1.0416666666666665%;
+    /*			.row(12);*/
+  
+  }
+  div section article {
+    /*				.column(5,10);*/
+  
+  }
+  div aside {
+    -webkit-box-sizing: border-box;
+    /* Safari/Chrome, other WebKit */
+  
+    -moz-box-sizing: border-box;
+    /* Firefox, other Gecko */
+  
+    box-sizing: border-box;
+    /* Opera/IE 8+ */
+  
+    display: inline;
+    float: left;
+    width: 14.583333333333334%;
+    margin: 0 1.0416666666666665%;
+  }
+}
+/* !Clearfix */
+body > div:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+/* IE6 */
+/*
+* html .subInputList {
+	height: 1%;
+}
+*/
+/* IE7 */
+/*
+*:first-child+html .subInputList {
+	min-height: 1px;
+}
+*/

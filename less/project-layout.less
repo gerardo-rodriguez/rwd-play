@@ -1,0 +1,110 @@
+// ------------------------------------ !CORE LAYOUT ------------------------------------
+// This is THE less file that contains the actual styles of the application. Feel free to modify this to your heart's desire.
+//
+
+// Semantic.gs settings
+@column-width: 60;
+@gutter-width: 20;
+@columns: 12;
+
+@total-width: 100%;
+
+
+html {
+	overflow: hidden;
+}
+
+body {
+	color: @theme-text-color;
+	font: 12px/1.5 Arial, sans-serif;
+/*	width: @core-page-width;*/
+
+	& > div {
+		padding: 30px 0px;
+	}
+}
+
+header {
+	background: green;
+	color: #fff;
+	padding: 1px;
+	text-align: center;
+}
+
+section {
+	article {
+		border: 1px solid red;
+		padding: 15px;
+	}
+}
+
+aside {
+	border: 1px solid red;
+	padding: 5px;
+}
+
+
+footer {
+	clear: both;
+	color: #fff;
+	text-align: center;
+	background: hsla(90,50%,50%,1);
+	padding: 20px;
+}
+
+@media only screen and (min-width: 768px) {
+/*
+	section {
+		.column(10);
+		.row(10);
+		
+		article {
+			.column(10,10);
+		}
+	}
+
+	aside {
+		.column(2);
+	}
+*/
+}
+
+@media only screen and (min-width: 1024px) {
+	div {
+/*		.column(12);*/
+		section {
+			.column(10);
+/*			.row(12);*/
+		
+			article {
+/*				.column(5,10);*/
+			}
+		}
+
+		aside {
+			.column(2);
+		}
+	}
+}
+
+
+/* !Clearfix */
+body > div:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+/* IE6 */
+/*
+* html .subInputList {
+	height: 1%;
+}
+*/
+/* IE7 */
+/*
+*:first-child+html .subInputList {
+	min-height: 1px;
+}
+*/
